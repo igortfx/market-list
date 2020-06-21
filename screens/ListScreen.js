@@ -133,7 +133,9 @@ export default class ListScreen extends React.Component {
                     button={true}
                     renderRow={this.renderRow}
                     dataArray={this.state.items}
-                    style={styles.list}/>
+                    style={styles.list}
+                    keyExtractor={item => item.id.toString()}
+                />
                 <Footer>
                     <FooterTab>
                         <Button onLongPress={() => {this.shouldCleanList()}} vertical>
