@@ -25,13 +25,13 @@ export default function App(props) {
               quantity int null default(0),
               amount double default(0),
               in_cart int default(0))`);
-  })
+  });
 
   if (!isLoadingComplete) {
     return null;
   } else {
     return (
-        <Container style={styles.container}>
+        <Container>
           {Platform.OS === 'ios' && <StatusBar barStyle="dark-content" />}
           <NavigationContainer linking={LinkingConfiguration}>
             <Stack.Navigator screenOptions={{
@@ -44,10 +44,3 @@ export default function App(props) {
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    // flex: 1,
-    // backgroundColor: '#fff',
-  },
-});

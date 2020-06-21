@@ -1,8 +1,8 @@
 import { createStackNavigator } from "@react-navigation/stack";
 import * as React from 'react';
 import ListScreen from "../screens/ListScreen";
-import {Button, Icon, Text} from "native-base";
-import { FontAwesome, SimpleLineIcons } from '@expo/vector-icons';
+import {Button, Text} from "native-base";
+import { SimpleLineIcons } from '@expo/vector-icons';
 import ItemScreen from "../screens/ItemScreen";
 const Stacks = createStackNavigator();
 
@@ -40,7 +40,7 @@ function getHeaderTitle(route) {
     switch (routeName) {
         case 'List':
             return 'Lista de Compras';
-        case 'ListItem':
+        case 'Item':
             return 'Item da Lista';
     }
 }

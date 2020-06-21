@@ -103,6 +103,19 @@ export default class Model {
         });
     }
 
+    static deleteAll() {
+        return new Promise((resolve, reject) => {
+            const statement = `DELETE FROM ${this.table}`;
+            this.database.transaction(tx => {
+                tx.executeSql(statement, [], function (stmt, result) {
+                    resolve(result.rowsAffected);
+                }, function (stmt, error) {
+                    reject(error.message);
+                })
+            })
+        });
+    }
+
     static all() {
         if(this.table === null){ throw exceptionMessages.tableIsNull; }
         return new Promise(resolve => {
