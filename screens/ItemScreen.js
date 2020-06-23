@@ -93,7 +93,7 @@ export default class ItemScreen extends React.Component {
                             <Input keyboardType={'number-pad'} onChangeText={quantity => this.setState({quantity})} value={String(this.state.quantity)} />
                         </Item>
                         <Item stackedLabel>
-                            <Label>Valor</Label>
+                            <Label>Valor por unidade</Label>
                             <TextInputMask
                                 includeRawValueInChangeText={true}
                                 ref={ref => this.amountField = ref}

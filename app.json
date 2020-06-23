@@ -4,8 +4,7 @@
     "slug": "market-list",
     "platforms": [
       "ios",
-      "android",
-      "web"
+      "android"
     ],
     "version": "1.0.0",
     "orientation": "portrait",
@@ -23,7 +22,8 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.igor-the-fox.market-list"
     },
     "web": {
       "favicon": "./assets/images/favicon.png"

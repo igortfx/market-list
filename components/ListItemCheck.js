@@ -14,7 +14,7 @@ export default class ListItemCheck extends React.Component {
 
         let valueText;
         if('value' in this.props){
-            valueText = <Text>{MaskService.toMask('money', this.props.value, {unit: 'R$ '})}</Text>
+            valueText = <Text>{MaskService.toMask('money', this.props.value, {unit: 'R$ '})} un.</Text>
         }
 
         return (

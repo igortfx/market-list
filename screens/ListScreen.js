@@ -95,21 +95,24 @@ export default class ListScreen extends React.Component {
     }
 
     shouldCleanList() {
-        Alert.alert(
-            "Limpar Lista",
-            "Deseja remover todos os itens da lista?",
-            [
-                {
-                    text: "Cancelar",
-                    style: "cancel"
-                },
-                {
-                    text: "Limpar", onPress: () => this.deleteAllItems(),
-                    style: 'destructive'
-                }
-            ],
-            { cancelable: false }
-        );
+        Haptics.impactAsync('light').then(() => {
+            Alert.alert(
+                "Limpar Lista",
+                "Deseja remover todos os itens da lista?",
+                [
+                    {
+                        text: "Cancelar",
+                        style: "cancel"
+                    },
+                    {
+                        text: "Limpar", onPress: () => this.deleteAllItems(),
+                        style: 'destructive'
+                    }
+                ],
+                { cancelable: false }
+            );
+        });
+
     }
 
     deleteAllItems() {
